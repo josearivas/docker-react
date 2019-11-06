@@ -13,4 +13,25 @@ notifications:
         recipients:
             - rivass.josea@gmail.com
         on_success: always
-        on_failure: always      
+        on_failure: always
+
+# AWS Elastic Beanstalk        
+#deploy:
+#    provider: elasticbeanstalk
+#    region: "us-west-2"
+#    app: "docker"
+#    env: "Docker-env"
+#    bucket-name: "elasticbeanstalk-us-west-2-306476627547"
+#    bucker-path: "docker"
+#    on:
+#        branch: master        
+#    access_key_id: $AWS_ACCESS_KEY
+#    secret_access_key:
+#        secure: "$AWS_SECRET_KEY"
+        
+# Custom deployment        
+#deploy:
+#    provider: script
+#    script: bash scripts/deploy.sh
+#    on:
+#        branch: master        
